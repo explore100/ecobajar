@@ -8,6 +8,11 @@ export interface Product {
     title: string
 }
 
+// this is the code of FeatProduct.tsx
+export interface FeatProduct {
+    title: string
+}
+
 
 
 // this is the code of Item.tsx
@@ -95,7 +100,7 @@ interface Vege {
     id: number;
     img: string;
     title: string;
-    price: number;
+    price: string | number;
    
     
 }
@@ -111,20 +116,20 @@ interface HotProduct {
             id: 18,
             img: Vegetable_Image.pear,
             title: 'Green Apple',
-            price: 14.99, 
+            price: "$14.99", 
         },
         {
             id: 19,
             img: Vegetable_Image.orange,
             title: "Fresh Indian Malta",
-            price: 20.00,
+            price: "$20.00",
             
         },
         {
             id: 20,
             img: Vegetable_Image.chines,
             title: 'Chines Cabbage',
-            price: 12.00,
+            price: "$12.00",
            
 
         },
@@ -132,51 +137,92 @@ interface HotProduct {
             id: 21,
             img: Vegetable_Image.curlys,
             title: 'Green Lettuce',
-            price: 9.00,
+            price:"$9.00",
 
         },
         {
             id: 22,
             img: Vegetable_Image.brinjal,
             title: 'Eggplant',
-            price: 34.00,
+            price: "$34.00",
 
         },
         {
             id: 23,
             img: Vegetable_Image.potato,
             title: 'Big Potatoes',
-            price: 20.00,
+            price: "$20.00",
 
         },
         {
             id: 24,
             img: Vegetable_Image.maze,
             title: 'corn',
-            price: 20.00,
+            price: "$20.00",
 
         },
         {
             id: 25,
             img: Vegetable_Image.cauli,
             title: 'Fresh CauliFlower',
-            price: 12.00,
+            price: "$12.00",
 
         },
         {
             id: 26,
             img: Vegetable_Image.capcicon,
             title: 'Green Capcicun',
-            price: 9.00,
+            price: "$9.00",
 
         },
         {
             id: 27,
             img: Vegetable_Image.chilli,
             title: 'Green Chili',
-            price: 34.00,
+            price: "$34.00",
 
         }
+    ]
+};
+
+//This is the code of BannerS.tsx
+
+import {Fruit_Image} from "../Utility/Staticimage";
+
+interface Fruit {
+    id: number;
+    img: string;
+    subtitle: string | number;
+    title: string;
+    price: string | number;
+}
+
+interface BannerProduct {
+    BannerProductData: Fruit[];
+}
+export const bannerproduct: BannerProduct = {
+    BannerProductData:[
+        {
+            id: 40,
+            img: Fruit_Image.mix,
+            subtitle: "best deal",
+            title: "Sale of the month",
+            price: ""
+        },
+        {
+            id: 41,
+            img: Fruit_Image.meat,
+            subtitle: "85% fat free",
+            title: "LOw-Fat Meat",
+            price: " $79.99"
+        },
+        {
+            id: 42,
+            img: Fruit_Image.yellow,
+            subtitle: "summer sale",
+            title: "100% Fresh Fruit",
+            price: "64% OFF"
+        },
     ]
 };
 

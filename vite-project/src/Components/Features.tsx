@@ -3,7 +3,7 @@ import { date } from "../Types/Types"
 
 const Features = () => {
   return (
-    <section className="w-[82.5rem] h-[8rem] mx-[18.75rem] mt-[1.5rem] ">
+    <section className="w-[85rem] h-[8rem] mx-[18.75rem] mt-[1.5rem] rounded-lg shadow-md ">
       <div className="flex items-center">
         {
           date.FeatureData.map((item, index) => (

@@ -2,6 +2,7 @@ import banner1 from '../assets/Image/main-removebg-preview.png'
 import { FaArrowRight } from "react-icons/fa6";
 import banner2 from '../assets/Image/BG.png';
 import banner3 from '../assets/Image/green.png';
+import ShopButton from '../Ui/ShopButton';
 
 const Bannar = () => {
     return (
@@ -19,7 +20,7 @@ const Bannar = () => {
                         </div>
                         <p className='font-normal text-base mt-[0.5rem] text-[#808080] '>Free shipping on all your order.</p>
                     </div>
-                    <button className=' rounded-full flex items-center gap-[1rem] bg-[#FFFFFF] px-[2.5rem] py-[1rem] font-semibold text-base text-[#00B207]'>Shop now <FaArrowRight /> </button>
+                <ShopButton title='Shop Now' icon={<FaArrowRight/>} />
                 </div>
             </div>
             <div className='grid grid-rows-2  gap-[1.5rem] mr-[1.5rem]'>

@@ -75,3 +75,17 @@ export const Vegetable_Image: VegetableImage = {
   capcicon,
   chilli,
 };
+import mix from "../assets/Image/mix.png";
+import meat from "../assets/Image/meat.png";
+import yellow from "../assets/Image/yellow.png";
+
+type FruitImage = {
+  [key: string]: string;
+};
+
+export const Fruit_Image: FruitImage = {
+  mix,
+  meat,
+  yellow,
+};
+

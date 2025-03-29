@@ -6,7 +6,7 @@ import { BsHandbag } from "react-icons/bs";
 
 const Heade = () => {
     return (
-        <section className="border-t-4 border-indigo-500 w-full h-[93px] flex justify-evenly items-center  px-8">
+        <section className="border-t-4 border-[#E5E5E5] w-full h-[93px] flex justify-evenly items-center  px-8">
             {/* Logo Section */}
             <div className="flex items-center gap-2">
                 <img src={Leaf} alt="Plant Logo" className="h-8 w-8" />

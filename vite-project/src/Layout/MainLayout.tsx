@@ -1,9 +1,12 @@
 import { NavLink, Outlet } from "react-router"
 import PreHeader from "./PreHeader"
 import { MdOutlineWifiCalling3 } from "react-icons/md";
+import BannerS from "../Components/BannerS";
 import Bannar from "../Components/Bannar";
 import Features from "../Components/Features";
 import Item from "../Components/Item";
+import FeatProduct from "../Components/FeatProduct";
+
 
 
 
@@ -30,6 +33,8 @@ const MainLayout = () => {
 <Bannar/>
 <Features/>
 <Item/>
+<FeatProduct/>
+<BannerS/>
 
 
 
