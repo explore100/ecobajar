@@ -1,4 +1,4 @@
-import { IpreHeader, Product, FeatProduct } from "../Types/Types";
+import { IpreHeader, Product, FeatProduct, LatestNews,  } from "../Types/Types";
 
 
 
@@ -13,6 +13,11 @@ export const PopularProduct: Product ={
 export const DetailProduct: FeatProduct ={
     title: 'Featured Products'
 }
+
+export const Latest: LatestNews ={
+    title: 'Latest News'
+}
+
 
 
 

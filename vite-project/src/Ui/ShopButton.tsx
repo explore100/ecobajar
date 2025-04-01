@@ -1,17 +1,15 @@
-import React from "react";
-
-// Define props explicitly
-interface ShopButtonProps {
-  title: string; // Button text
-  icon: React.ReactNode; // Icon component
+interface ButtonProps{
+  title: string;
+  icon: React.ReactNode;
+  bgcolor: string;
+  textcolor: string;  // optional property with default value
 }
 
-const ShopButton = ({ title, icon }: ShopButtonProps) => {
+const ShopButton = ({title, icon, bgcolor, textcolor}: ButtonProps) => {
   return (
-    <button className="flex items-center justify-center w-[11.9375rem] h-[3.1875rem] rounded-full font-semibold text-base gap-[0.75rem] bg-[#FFFFFF] text-[#00B207]">
-  {title} {icon}
-</button>
-
+    <button className={`flex items-center justify-center w-[11.9375rem] h-[3.1875rem] py-[0.875rem] rounded-full font-semibold  text-base gap-[0.75rem] ${bgcolor} ${textcolor}`} > 
+    {title} {icon}
+    </button>
   );
 };
 

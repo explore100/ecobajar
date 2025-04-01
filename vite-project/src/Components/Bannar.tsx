@@ -20,17 +20,26 @@ const Bannar = () => {
                         </div>
                         <p className='font-normal text-base mt-[0.5rem] text-[#808080] '>Free shipping on all your order.</p>
                     </div>
-                <ShopButton title='Shop Now' icon={<FaArrowRight/>} />
+                    <ShopButton
+  title="Shop Now"
+  icon={<FaArrowRight />}
+  bgcolor="bg-white" // Tailwind bg color
+  textcolor="text-[#00B207]" // Tailwind text color
+/>
                 </div>
             </div>
             <div className='grid grid-rows-2  gap-[1.5rem] mr-[1.5rem]'>
                 <div>
                     <img src={banner2} className='h-[18rem] w-[26.4375rem] absolute' />
-                    <div  className='h-[8.5rem] w-[9.75rem] relative top-[2rem] left-[2rem]'>
+                    <div  className='h-[8.5rem] w-[9.75rem]  relative top-[2rem] left-[2rem]'>
                         <h2 className='font-medium text-sm uppercase'>summer sale</h2>
                         <h1 className='font-semibold pt-[0.5rem] text-4xl'>75% OFF</h1>
                         <p className='font-normal text-sm pt-[0.75rem] text-[#666666]'>Only Fruit & Vegetable</p>
-                        <button className='flex items-center font-semibold text-base pt-[1.5rem] gap-[0.75rem] text-[#00B207]'>Shop Now <FaArrowRight/></button>
+                        <ShopButton 
+                        title="Shop Now"
+                        icon={<FaArrowRight />}
+                        bgcolor="" // Tailwind bg color
+                        textcolor="text-[#00B207]" />
                     </div>
                 </div>
                 <div>

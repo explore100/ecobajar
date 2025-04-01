@@ -75,6 +75,8 @@ export const Vegetable_Image: VegetableImage = {
   capcicon,
   chilli,
 };
+
+
 import mix from "../assets/Image/mix.png";
 import meat from "../assets/Image/meat.png";
 import yellow from "../assets/Image/yellow.png";
@@ -88,4 +90,94 @@ export const Fruit_Image: FruitImage = {
   meat,
   yellow,
 };
+
+// THis image are of Latest.tsx
+import ora from "../assets/Image/orange.png";
+import egg from "../assets/Image/omlet.png";
+import salad from "../assets/Image/salad.png";
+
+type LatestImage = {
+  [key: string]: string;
+};
+export const Latest_Image: LatestImage ={
+  ora,
+  egg,
+  salad,
+};
+
+// this is the code of Testimonial.tsx
+import personA from "../assets/Image/person1.png";
+import personB from "../assets/Image/person2.png";
+import personc from "../assets/Image/person3.png";
+
+type Person  ={
+  [key: string]: string;
+}
+
+export const Person_Image: Person ={
+    personA,
+    personB,
+    personc,
+};
+
+// this is the code of comp logo
+
+import logoA from "../assets/Image/step.png";
+import logoB from "../assets/Image/mago.png";
+import logoC from "../assets/Image/foodnet.png";
+import logoD from "../assets/Image/ood.png";
+import logoE from "../assets/Image/book.png";
+import logoF from "../assets/Image/gseries.png";
+
+type CompLogo = {
+  [key: string]: string;
+}
+export const Comp_logo: CompLogo ={
+  logoA,
+  logoB,
+  logoC,
+  logoD,
+  logoE,
+  logoF,
+}
+
+// this is the code of Insta.tsx
+
+import insta1 from "../assets/Image/tom.png";
+import insta2 from "../assets/Image/lea.png";
+import insta3 from "../assets/Image/leaf.png";
+import insta4 from "../assets/Image/blackcap.png";
+import insta5 from "../assets/Image/sag.png";
+import insta6 from "../assets/Image/lime.png";
+
+type Instagram = {
+  [key: string]: string;
+}
+
+export const Instagram_Image: Instagram ={
+  insta1,
+  insta2,
+  insta3,
+  insta4,
+  insta5,
+  insta6,
+}
+
+// this is the code of footer.tsx
+import footerA from "../assets/Image/applepay.png";
+import footerB from "../assets/Image/visa.png";
+import footerC from "../assets/Image/discover.png";
+import footerD from "../assets/Image/mastercard.png";
+import footerE from "../assets/Image/Cart.png";
+type FooterLogo = {
+  [key: string]: string;
+}
+export const Footer_LOGO: FooterLogo ={
+  footerA,
+  footerB,
+  footerC,
+  footerD,
+  footerE,
+}
+
 

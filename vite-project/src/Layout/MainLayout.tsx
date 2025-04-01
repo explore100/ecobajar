@@ -6,6 +6,13 @@ import Bannar from "../Components/Bannar";
 import Features from "../Components/Features";
 import Item from "../Components/Item";
 import FeatProduct from "../Components/FeatProduct";
+import Discount from "../Components/DiscountBan";
+import Latest from "../Components/Latest";
+import Testimonials from "../Components/Testimonials";
+import CompLogo from "../Components/CompLogo";
+import Insta from "../Components/Insta";
+import Subscribe from "../Components/Subscribe";
+import Footer from "./Footer";
 
 
 
@@ -33,8 +40,15 @@ const MainLayout = () => {
 <Bannar/>
 <Features/>
 <Item/>
-<FeatProduct/>
 <BannerS/>
+<Discount/>
+<FeatProduct/>
+<Latest/>
+<Testimonials/>
+<CompLogo/>
+<Insta/>
+<Subscribe/>
+<Footer/>
 
 
 
