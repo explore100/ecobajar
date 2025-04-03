@@ -18,6 +18,32 @@ export const Latest: LatestNews ={
     title: 'Latest News'
 }
 
+//this is the code of footer
+interface FooterSection {
+    title: string;
+    links: string[];
+  }
+  
+  // Footer data
+ export const footerData: FooterSection[] = [
+    {
+      title: "My Account",
+      links: ["My Account", "Order History", "Shopping Cart", "Wishlist"],
+    },
+    {
+      title: "Helps",
+      links: ["Contact", "FAQs", "Terms & Condition", "Privacy Policy"],
+    },
+    {
+      title: "Proxy",
+      links: ["About", "Shop", "Product", "Track Order"],
+    },
+    {
+      title: "Categories",
+      links: ["Fruit & Vegetables", "Meat & Fish", "Bread & Bakery", "Beauty & Health"],
+    },
+  ];
+
 
 
 
