@@ -18,6 +18,11 @@ export interface LatestNews {
     title: string
 }
 
+// this is the code of hot deals
+export interface HotDeals {
+    title: string
+}
+
 
 
 
@@ -186,7 +191,24 @@ export const hotproduct: HotProduct = {
             img: Vegetable_Image.chilli,
             title: 'Green Chili',
             price: "$34.00",
-
+        },
+        {
+            id: 28,
+            img: Vegetable_Image.redcap,
+            title: 'Red Chili',
+            price: "$12.00",
+        },
+        {
+            id: 29,
+            img: Vegetable_Image.tomato,
+            title: 'Red Tomatos',
+            price: "$9.00",
+        },
+        {
+            id: 30,
+            img: Vegetable_Image.slicmango,
+            title: "Surjapur Mango",
+            price: "$34.00",
         }
     ]
 };

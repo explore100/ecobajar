@@ -13,7 +13,7 @@ const Deals = () => {
             </div>
             <div className=" grid  grid-cols-5 mt-[2rem]">
                 {
-                    hotproduct.ProductData.map((item, index) => (
+                    hotproduct.ProductData.slice(0,10).map((item, index) => (
                         <Card title={item.title} index={index} image={item.img} price={item.price} />
                         
                     ))

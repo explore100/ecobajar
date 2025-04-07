@@ -2,6 +2,7 @@ import { BsHandbag } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import ShopButton from "./ShopButton";
 
 interface Props {
     image: string;
@@ -35,6 +36,15 @@ const Card = ({ image, price, index, title }: Props) => {
                         <FaStar />
                     </button>
                 ))}
+            </div>
+            <div className="w-[32.9375rem] h-[2.875rem] justify-evenly hidden ">
+            <button className="border rounded-full p-[10px] shadow-md" ><CiHeart /></button>
+            <ShopButton 
+                        title="Read More"
+                        icon={<BsHandbag/>}
+                        bgcolor="bg-[#00B207]" 
+                            textcolor="text-[#ffffff]" />
+            <button className="border rounded-full p-[10px]"  ><IoEyeOutline /></button>
             </div>
         </div>
     )

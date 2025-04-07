@@ -15,8 +15,12 @@ const Latest = () => {
       <div className="flex gap-[1.5rem] pt-[32px]">
         {
           latestnewz.LatestNewsData.filter((item) => [50, 51, 52]. includes(item.id)).map((item) =>(
-            <div key={item.id} >
-              <img src={item.img} className="w-[26.5rem] h-[20.25rem]" />
+            <div key={item.id} className="relative">
+              <img src={item.img} className="w-[26.5rem] h-[20.25rem] " />
+              <div className="bg-[#FFFFFFD9] w-[3.625rem] px-[1rem] py-[0.375rem] h-[3.625rem] absolute top-[15.125rem] left-[1.5rem] rounded-md">
+                <p className="font-medium text-xl">29</p>
+                <h4 className="uppercase font-medium text-xs">jan</h4>
+              </div>
               <div className=" h-[10.625rem] w-[26.5rem]  px-[1.5rem] pt-[1.5rem] border rounded-b-lg shadow-md " >
                 <div className="flex  gap-[1rem] font-normal text-sm text-[#4D4D4D]">
                 <h2 className="flex items-center  gap-[0.25rem]"><GoTag/>{item.titleA}</h2>

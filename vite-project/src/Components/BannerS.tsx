@@ -17,6 +17,27 @@ const BannerS = () => {
               <div className="absolute top-0 left-0 w-full h-full flex flex-col mt-[2.1875rem] items-center gap-[16px]  text-white p-4">
                 <h2 className={`text-base font-medium uppercase ${item.id === 42 ? 'text-black' : ''}`}>{item.subtitle}</h2>
                 <h1 className={`text-4xl font-semibold ${item.id === 42 ? 'text-black' : ''}`}>{item.title}</h1>
+
+                {item.id === 40 && (
+                  <div className="w-[18.125rem] h-[3.25rem] pt-[0.5rem] flex justify-center" id="sagar">
+                    <div className="w-[3.5rem] h-[3.25rem] text-center">
+                      <p className="font-normal text-2xl">00</p>
+                      <h1 className="text-xs text-[#FFFFFFCC] uppercase">days</h1>
+                    </div>
+                    <div className="w-[3.5rem] h-[3.25rem] text-center">
+                      <p className="font-normal text-2xl">00</p>
+                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">hours</h1>
+                    </div>
+                    <div className="w-[3.5rem] h-[3.25rem] text-center">
+                      <p className="font-normal text-2xl">00</p>
+                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">mins</h1>
+                    </div>
+                    <div className="w-[3.5rem] h-[3.25rem] text-center">
+                      <p className="font-normal text-2xl">00</p>
+                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">secs</h1>
+                    </div>
+                  </div>
+                )}
                 <p className="text-xl font-semibold ">
                   {item.id === 41 ? (
                     <span className="text-white">Started at</span>

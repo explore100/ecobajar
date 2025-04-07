@@ -59,6 +59,9 @@ import maze from "../assets/Image/maze.png";
 import cauli from "../assets/Image/cauli.png";
 import capcicon from "../assets/Image/capsicon.png";
 import chilli from "../assets/Image/chilli.png";
+import redcap from "../assets/Image/redcap.png";
+import tomato from "../assets/Image/tomato.png";
+import slicmango from "../assets/Image/mango.png";
 type VegetableImage = {
   [key: string]: string;
 };
@@ -74,6 +77,10 @@ export const Vegetable_Image: VegetableImage = {
   cauli,
   capcicon,
   chilli,
+  redcap,
+  tomato,
+  slicmango,
+
 };
 
 

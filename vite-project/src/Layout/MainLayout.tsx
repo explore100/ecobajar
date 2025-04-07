@@ -17,6 +17,8 @@ import Footer from "./Footer";
 
 
 
+
+
 const MainLayout = () => {
   return (
     <>
@@ -41,6 +43,7 @@ const MainLayout = () => {
 <Features/>
 <Item/>
 <BannerS/>
+
 <Discount/>
 <FeatProduct/>
 <Latest/>
@@ -49,6 +52,7 @@ const MainLayout = () => {
 <Insta/>
 <Subscribe/>
 <Footer/>
+
 
 
 

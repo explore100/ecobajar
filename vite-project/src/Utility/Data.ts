@@ -1,6 +1,8 @@
-import { IpreHeader, Product, FeatProduct, LatestNews,  } from "../Types/Types";
+import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals,  } from "../Types/Types";
 
-
+export const  HotDealsdata: HotDeals ={
+  title: "Hot Deals"
+}
 
 export const preHeaderdata: IpreHeader ={
     title: 'Store Location: Lincoln-344, Illinois, Chicago, USA'
