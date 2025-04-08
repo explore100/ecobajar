@@ -38,13 +38,13 @@ const Card = ({ image, price, index, title }: Props) => {
                 ))}
             </div>
             <div className="w-[32.9375rem] h-[2.875rem] justify-evenly hidden ">
-            <button className="border rounded-full p-[10px] shadow-md" ><CiHeart /></button>
-            <ShopButton 
-                        title="Read More"
-                        icon={<BsHandbag/>}
-                        bgcolor="bg-[#00B207]" 
-                            textcolor="text-[#ffffff]" />
-            <button className="border rounded-full p-[10px]"  ><IoEyeOutline /></button>
+                <button className="border rounded-full p-[10px] shadow-md" ><CiHeart /></button>
+                <ShopButton
+                    title="Read More"
+                    icon={<BsHandbag />}
+                    bgcolor="bg-[#00B207]"
+                    textcolor="text-[#ffffff]" />
+                <button className="border rounded-full p-[10px]"  ><IoEyeOutline /></button>
             </div>
         </div>
     )

@@ -1,5 +1,4 @@
 import { CiLocationOn } from "react-icons/ci";
-import Heade from "./Heade";
 import { preHeaderdata } from "../Utility/Data";
 
 
@@ -23,7 +22,7 @@ const PreHeader = () => {
                     <button className="cursor-pointer">Sign In / Sign Up</button>
                 </div>
             </section>
-            <Heade />
+            
         </>
     )
 }

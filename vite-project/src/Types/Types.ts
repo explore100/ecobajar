@@ -26,6 +26,7 @@ export interface HotDeals {
 
 
 
+import { ImGift } from "react-icons/im"
 // this is the code of Item.tsx
 import { STATICS_IMAGE } from "../Utility/Staticimage";
 
@@ -209,6 +210,24 @@ export const hotproduct: HotProduct = {
             img: Vegetable_Image.slicmango,
             title: "Surjapur Mango",
             price: "$34.00",
+        },
+        {
+            id: 31,
+            img:Vegetable_Image.redchilly,
+            title: "Red Chilli",
+            price: "$14.99",
+        },
+        {
+            id: 32,
+            img: Vegetable_Image.cucumber,
+            title:" Green Cucumber",
+            price: "$14.99",
+        },
+        {
+            id: 33,
+            img: Vegetable_Image.ladyfinger,
+            title:"Ladies Finger",
+            price:"$14.99",
         }
     ]
 };
