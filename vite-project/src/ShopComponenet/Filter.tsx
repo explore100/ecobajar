@@ -1,60 +1,36 @@
-import { RxCross1 } from "react-icons/rx";
+
+import { IoFilter } from "react-icons/io5";
+import CartProd from "./CartProd";
+import Category from "./Category";
 
 
 const Filter = () => {
-    return (
-        <section className="w-full h-[7.375rem] mt-[2.5rem]">
-            <div className="w-full h-[2.5625rem] flex justify-evenly">
-                <div className=" flex gap-[1rem]">
-
-                    <select className="cursor-pointer w-[11.125rem] h-[2.5625rem] rounded-md border-[0.0625rem] pl-[0.625rem] py-[0.5rem]">
-                        <option value="currency">Select Category</option>
-                    </select>
-
-
-                    <select className="cursor-pointer w-[11.125rem] h-[2.5625rem] rounded-md border-[0.0625rem] pl-[0.625rem] py-[0.5rem]">
-                        <option value="currency">Select Price</option>
-                    </select>
-
-
-                    <select className="cursor-pointer w-[11.125rem] h-[2.5625rem] rounded-md border-[0.0625rem] pl-[0.625rem] py-[0.5rem]">
-                        <option value="currency">Select Rating</option>
-                    </select>
-
-                </div>
-                <div className="flex gap-[1rem]">
-
-                    <select className="cursor-pointer w-[11.125rem] h-[2.5625rem] rounded-md border-[0.0625rem] pl-[0.625rem] py-[0.5rem]">
-                        <option value="currency">Sort by: Latest</option>
-                    </select>
-
-                    <select className="cursor-pointer w-[11.125rem] h-[2.5625rem] rounded-md border-[0.0625rem] pl-[0.625rem] py-[0.5rem]">
-                        <option value="currency">Show: 16</option>
+  return (
+    <>
+    <section className='h-[137.5rem] w-[82.5rem] mt-[2rem] mx-[18.75rem]'>
+        <div className='w-[82.3125rem] h-[2.8125rem] flex items-center justify-between '>
+            <div className="w-[8.1875rem] h-[2.8125rem]">
+                <button className='bg-[#00B207] py-[14px] px-[32px] flex items-center gap-[0.75rem] rounded-full text-sm font-semibold text-[#FFFFFF]'>Filter<IoFilter/></button>
+            </div>
+            <div className="w-[226px] h-[41px] flex justify-center items-center gap-[0.5rem]">
+                <h1 className="font-normal text-sm text-[#808080]">sort by :</h1>
+                <div className=" ">
+                    <select name="Latest" className="w-[10.375rem] h-[2.5625rem] px-[1rem] border rounded py-[0.625rem]" >
+                        <option value="Latest">Latest</option>
                     </select>
                 </div>
             </div>
-            <div className="flex justify-between items-center px-[18.75rem] mt-6 h-[53px]">
-                {/* Left - Active Filters */}
-                <div className="flex items-center gap-6">
-                    <h1 className="text-[#808080] font-normal text-sm ">Active Filters:</h1>
-                    <span className="flex items-center gap-2 px-2 py-1 font-medium text-sm">
-                        wing chair <RxCross1 />
-                    </span>
-                    <span className="flex items-center gap-2  px-2 py-1 font-medium text-sm">
-                        min $300 - max $500 <RxCross1 />
-                    </span>
-                </div>
-
-                {/* Right - Results */}
-                <div className="flex items-center text-sm font-medium gap-2">
-                    <span>2574</span>
-                    <span className="text-[#272343]">results found.</span>
-                </div>
+            <div className="w-[8.375rem] h-[1.5rem] ">
+            <h1 className="font-semibold text-base">52<span className="text-[#808080] font-normal text-base">Results Found</span></h1>
             </div>
-
-
+        </div>
+        <section className="flex">
+            <Category/>
+            <CartProd/>
         </section>
-    )
+    </section>
+    </>
+  )
 }
 
 export default Filter

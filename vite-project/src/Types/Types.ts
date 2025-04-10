@@ -26,7 +26,6 @@ export interface HotDeals {
 
 
 
-import { ImGift } from "react-icons/im"
 // this is the code of Item.tsx
 import { STATICS_IMAGE } from "../Utility/Staticimage";
 

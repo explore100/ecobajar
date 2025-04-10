@@ -3,7 +3,7 @@ import { bannerproduct } from "../Types/Types"
 import ShopButton from "../Ui/ShopButton";
 import { FaArrowRight } from "react-icons/fa6";
 import Filter from "./Filter";
-import CartProd from "./CartProd";
+
 
 
 
@@ -11,7 +11,7 @@ import CartProd from "./CartProd";
 const ShopBanner = () => {
     return (
         <>
-            <section className="w-[82.5rem] h-[22.375rem]">
+            <section className="w-[82.5rem] h-[22.375rem] mt-[1.5rem]">
                 <img src={banner} className="rotate-180  object-cover w-[82.5rem] h-[22.375rem] rounded-lg mx-[18.75rem] absolute " alt="" />
                 <div className="w-[26.5rem] h-[14.5rem] relative top-[4.25rem] left-[340px]">
                     {
@@ -49,7 +49,7 @@ const ShopBanner = () => {
 
             </section>
             <Filter/>
-            <CartProd/>
+            
         </>
     )
 }
