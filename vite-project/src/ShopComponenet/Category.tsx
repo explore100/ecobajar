@@ -4,6 +4,7 @@ import PriceRangeSlider from "./Price";
 import RatingFilter from "./Rating";
 import PopularTags from "./Popular";
 import DisProduct from "./DisProduct";
+import SaleProduct from "./SaleProduct";
 
 type Category = {
     label: string;
@@ -58,6 +59,7 @@ const CategoryFilter: React.FC = () => {
             <RatingFilter/>
             <PopularTags/>
             <DisProduct/>
+            <SaleProduct/>
             </section>
         </>
     );

@@ -27,6 +27,7 @@ const Filter = () => {
         <section className="flex">
             <Category/>
             <CartProd/>
+            
         </section>
     </section>
     </>

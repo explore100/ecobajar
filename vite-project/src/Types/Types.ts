@@ -23,6 +23,10 @@ export interface HotDeals {
     title: string
 }
 
+export interface ShoppingCart {
+    title: string
+}
+
 
 
 
@@ -107,13 +111,12 @@ export const date: Date = {
 import { Vegetable_Image } from "../Utility/Staticimage";
 
 
-interface Vege {
+export interface Vege {
     id: number;
     img: string;
     title: string;
-    price: string | number;
-
-
+    price: number  ;
+    quantity: number;
 }
 
 interface HotProduct {
@@ -127,20 +130,23 @@ export const hotproduct: HotProduct = {
             id: 18,
             img: Vegetable_Image.pear,
             title: 'Green Apple',
-            price: "$14.99",
+            price: 14.99,
+            quantity: 1,
         },
         {
             id: 19,
             img: Vegetable_Image.orange,
             title: "Fresh Indian Malta",
-            price: "$20.00",
+            price: 14.99,
+            quantity: 1,
 
         },
         {
             id: 20,
             img: Vegetable_Image.chines,
             title: 'Chines Cabbage',
-            price: "$12.00",
+            price: 12.00,
+            quantity: 1,
 
 
         },
@@ -148,85 +154,98 @@ export const hotproduct: HotProduct = {
             id: 21,
             img: Vegetable_Image.curlys,
             title: 'Green Lettuce',
-            price: "$9.00",
+            price: 9.00,
+            quantity: 1,
 
         },
         {
             id: 22,
             img: Vegetable_Image.brinjal,
             title: 'Eggplant',
-            price: "$34.00",
+            price: 34.00,
+            quantity: 1,
 
         },
         {
             id: 23,
             img: Vegetable_Image.potato,
             title: 'Big Potatoes',
-            price: "$20.00",
+            price: 20.00,
+            quantity: 1,
 
         },
         {
             id: 24,
             img: Vegetable_Image.maze,
             title: 'corn',
-            price: "$20.00",
+            price: 20.00,
+            quantity: 1,
 
         },
         {
             id: 25,
             img: Vegetable_Image.cauli,
             title: 'Fresh CauliFlower',
-            price: "$12.00",
+            price: 12.00,
+            quantity: 1,
 
         },
         {
             id: 26,
             img: Vegetable_Image.capcicon,
             title: 'Green Capcicun',
-            price: "$9.00",
+            price: 9.00,
+            quantity: 1,
 
         },
         {
             id: 27,
             img: Vegetable_Image.chilli,
             title: 'Green Chili',
-            price: "$34.00",
+            price: 34.00,
+            quantity: 1,
         },
         {
             id: 28,
             img: Vegetable_Image.redcap,
             title: 'Red Chili',
-            price: "$12.00",
+            price: 12.00,
+            quantity: 1,
         },
         {
             id: 29,
             img: Vegetable_Image.tomato,
             title: 'Red Tomatos',
-            price: "$9.00",
+            price: 9.00,
+            quantity: 1,
         },
         {
             id: 30,
             img: Vegetable_Image.slicmango,
             title: "Surjapur Mango",
-            price: "$34.00",
+            price: 34.00,
+            quantity: 1,
         },
         {
             id: 31,
             img:Vegetable_Image.redchilly,
             title: "Red Chilli",
-            price: "$14.99",
+            price: 14.99,
+            quantity: 1,
         },
         {
             id: 32,
             img: Vegetable_Image.cucumber,
             title:" Green Cucumber",
-            price: "$14.99",
+            price: 14.99,
+            quantity: 1,
         },
         {
             id: 33,
             img: Vegetable_Image.ladyfinger,
             title:"Ladies Finger",
-            price:"$14.99",
+            price: 14.99,
+            quantity: 1,
         }
     ]
 };
@@ -421,5 +440,35 @@ export const footer: Footer ={
         
     ]
 }
+
+
+// This is the code of Cart.tsx
+
+// cartData.ts
+export interface CartItem {
+    id: number;
+    title: string;
+    img: string;
+    price: number
+    quantity: number;
+  }
+  
+  export const initialCart: CartItem[] = [
+    {
+      id: 1,
+      title: "Green Capsicum",
+      img: Vegetable_Image.capcicon,
+      price: 14.0,
+      quantity: 5,
+    },
+    {
+      id: 2,
+      title: "Red Capsicum",
+      img: Vegetable_Image.redcap,
+      price: 14.0,
+      quantity: 1,
+    },
+  ];
+  
 
 

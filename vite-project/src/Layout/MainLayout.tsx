@@ -24,6 +24,8 @@ const MainLayout = () => {
                         <li><NavLink to='/Blog'>Blog</NavLink></li>
                         <li><NavLink to='/About us'>About Us</NavLink></li>
                         <li><NavLink to='/Contact Us'>Contact Us</NavLink></li>
+                        <li><NavLink to='/Cart'></NavLink></li>
+                        <li><NavLink to='/CheckOut'></NavLink></li>
                     </ul>
                     <div className="flex items-center gap-2 text-[#FFFFFF]">
                         <MdOutlineWifiCalling3 className="h-7 w-7" />

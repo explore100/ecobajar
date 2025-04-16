@@ -1,4 +1,4 @@
-import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals,  } from "../Types/Types";
+import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals, ShoppingCart,  } from "../Types/Types";
 
 export const  HotDealsdata: HotDeals ={
   title: "Hot Deals"
@@ -18,6 +18,10 @@ export const DetailProduct: FeatProduct ={
 
 export const Latest: LatestNews ={
     title: 'Latest News'
+}
+
+export const MyShoppingCart: ShoppingCart ={
+    title: 'My Shopping Cart'
 }
 
 //this is the code of footer

@@ -6,6 +6,8 @@ import Pages from "../Pages/Pages";
 import Blog from "../Pages/Blog";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
+import CartProduct from "../Pages/CartProduct";
+import Total from "../Cart/Total";
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ export const router = createBrowserRouter([
             {
                 path: 'Contact Us',
                 element: <ContactUs />,
+            },
+            {
+                path: 'Cart',
+                element: <CartProduct />,
+            },
+            {
+                path: 'CheckOut',
+                element: <Total subtotal={0} shipping={0}/>
             }
         ],
 
