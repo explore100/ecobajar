@@ -7,7 +7,8 @@ import Blog from "../Pages/Blog";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
 import CartProduct from "../Pages/CartProduct";
-import Total from "../Cart/Total";
+import CheckOut from "../Pages/CheckOut";
+
 
 export const router = createBrowserRouter([
     {
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'CheckOut',
-                element: <Total subtotal={0} shipping={0}/>
+                element: <CheckOut/>
             }
         ],
 

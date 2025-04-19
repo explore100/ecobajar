@@ -1,36 +1,46 @@
-import { NavLink } from "react-router";
+import { useCartStore } from "../Context/Main"; // Add this
+import { NavLink } from "react-router"; // fix typo: "react-router" ➡ "react-router-dom"
 import ShopButton from "../Ui/ShopButton";
+
 type TotalProps = {
-    subtotal: number;
-    shipping: number;
-  };
-  
-  const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
-    const total = subtotal + shipping;
-  
-    return (
-      <div className="w-[424px] h-[296px] border-2 rounded-lg p-6 relative bg-white shadow-md">
-        <h1 className="text-xl font-medium mb-6">Cart Total</h1>
-  
-        <div className="space-y-4">
-          <div className="flex justify-between items-center">
-            <span className="text-base font-normal">Subtotal:</span>
-            <span className="text-base font-semibold">${subtotal.toFixed(2)}</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-base font-normal">Shipping:</span>
-            <span className="text-base font-semibold">
-              {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-base font-normal">Total:</span>
-            <span className="text-base font-semibold">${total.toFixed(2)}</span>
-          </div>
+  subtotal: number;
+  shipping: number;
+};
+
+const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
+  const total = subtotal + shipping;
+  const cartItems = useCartStore((state) => state.cartItems); // get items from Zustand
+
+  return (
+    <div className="w-[424px] h-[296px] border-2 rounded-lg p-6 relative bg-white shadow-md">
+      <h1 className="text-xl font-medium mb-6">Cart Total</h1>
+
+      <div className="space-y-4">
+        <div className="flex justify-between items-center">
+          <span className="text-base font-normal">Subtotal:</span>
+          <span className="text-base font-semibold">${subtotal.toFixed(2)}</span>
         </div>
-       
-       
-        <NavLink to="/CheckOut">
+        <div className="flex justify-between items-center">
+          <span className="text-base font-normal">Shipping:</span>
+          <span className="text-base font-semibold">
+            {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
+          </span>
+        </div>
+        <div className="flex justify-between items-center">
+          <span className="text-base font-normal">Total:</span>
+          <span className="text-base font-semibold">${total.toFixed(2)}</span>
+        </div>
+      </div>
+
+      <NavLink
+        to="/CheckOut"
+        state={{
+          subtotal: subtotal.toFixed(2),
+          shipping: shipping.toFixed(2),
+          total: total.toFixed(2),
+          cartItems, // 👈 pass items too!
+        }}
+      >
         <div className="mt-8">
           <ShopButton
             title="Proceed to checkout"
@@ -39,10 +49,9 @@ type TotalProps = {
             textcolor="text-white"
           />
         </div>
-        </NavLink>
-      </div>
-    );
-  };
-  
-  export default Total;
-  
+      </NavLink>
+    </div>
+  );
+};
+
+export default Total;

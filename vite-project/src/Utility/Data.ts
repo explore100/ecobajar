@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals, ShoppingCart,  } from "../Types/Types";
 
 export const  HotDealsdata: HotDeals ={
@@ -49,6 +50,30 @@ interface FooterSection {
       links: ["Fruit & Vegetables", "Meat & Fish", "Bread & Bakery", "Beauty & Health"],
     },
   ];
+
+  export interface BillingInfo {
+    firstName: string;
+    lastName: string;
+    companyName?: string;
+    streetAddress: string;
+    country: string;
+    state: string;
+    zipCode: string;
+    email: string;
+    phone: string;
+    orderNotes?: string;
+    shipToDifferentAddress?: boolean;
+  }
+  export interface ProductType {
+    quantity: number;
+    price: ReactNode;
+    title: string;
+    rate: string;
+    fixRate?: string;
+    image: string;
+    star?: string | number;
+    badge?: string;
+  }
 
 
 
