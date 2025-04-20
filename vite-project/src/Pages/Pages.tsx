@@ -1,8 +1,9 @@
+import ImageDeat from "../ProductDetail/ImageDeat"
 
 
 const Pages = () => {
   return (
-    <div>Pages</div>
+    <div><ImageDeat/></div>
   )
 }
 

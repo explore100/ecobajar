@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
 import { Vege } from "../Types/Types";
-import ShopButton from "../Ui/ShopButton";
+import Payment from "./Payment";
 
 
 const OrderSum = () => {
@@ -23,7 +23,7 @@ const OrderSum = () => {
                         {cartItems.map((item: Vege) => (
                             <div
                                 key={item.id}
-                                className="flex items-center justify-between border-b pb-2"
+                                className="flex items-center justify-between  pb-2"
                             >
                                 <div className="flex items-center gap-2">
                                     <img
@@ -50,43 +50,23 @@ const OrderSum = () => {
 
                 {/* Price summary */}
                 <div className="space-y-4">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center pb-3 border-b">
                         <span className="text-base font-normal">Subtotal:</span>
                         <span className="text-base font-semibold">${subtotal}</span>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center pb-3 border-b">
                         <span className="text-base font-normal">Shipping:</span>
                         <span className="text-base font-semibold">
                             {parseFloat(shipping) === 0 ? "Free" : `$${shipping}`}
                         </span>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center pb-3 border-b">
                         <span className="text-base font-normal">Total:</span>
                         <span className="text-base font-semibold">${total}</span>
                     </div>
                 </div>
             </div>
-            <div className="w-full h-full p-[24px]">
-                <h1 className="font-medium text-xl"> Payement Method</h1>
-                <div className="pt-[1rem] ">
-
-                    <div className="flex items-center  gap-[8px] "> <input type="radio" />
-                        <p className="font-normal text-sm ">Cash On Delivery</p></div>
-                    <div className="flex items-center  gap-[8px] pt-[10px]"> <input type="radio" />
-                        <p className="font-normal text-sm">PayPal</p></div>
-                    <div className="flex items-center  gap-[8px] pt-[10px]"> <input type="radio" />
-                        <p className="font-normal text-sm">Amazon Pay</p></div>
-                </div>
-                <div className="pt-[24px] pl-[30px]">
-          <ShopButton
-            title="Proceed Order"
-            icon=""
-            bgcolor="bg-[#00B207]"
-            textcolor="text-white"
-          />
-        </div>
-            </div>
-         
+            <Payment/>
         </section>
     );
 };

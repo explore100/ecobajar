@@ -1,5 +1,6 @@
 // src/Pages/Cartx.tsx
 
+import { NavLink } from "react-router";
 import { useCartStore } from "../Context/Main";
 import { Vege } from "../Types/Types";
 import Total from "./Total"; // your total summary component
@@ -73,10 +74,13 @@ const Cartx: React.FC = () => {
         ))}
 
         <div className="flex justify-between px-[20px] py-[16px]">
+          <NavLink to="/shop" className="bg-gray-100 rounded-full hover:text-blue-500">
           <button className="px-4 py-2 bg-gray-100 rounded-full text-sm">
             Return to shop
           </button>
-          <button className="px-4 py-2 bg-gray-100 rounded-full text-sm">
+          </NavLink>
+         
+          <button className="px-4 py-2 bg-gray-100 rounded-full hover:text-blue-500 text-sm">
             Update Cart
           </button>
         </div>

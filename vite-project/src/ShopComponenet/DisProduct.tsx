@@ -4,8 +4,8 @@ import ShopButton from "../Ui/ShopButton";
 
 const DisProduct = () => {
   return (
-    <section className="relative rounded-[0.625rem]">
-      <img src={vegepic} className="pt-[120px]" alt="Discount Banner" />
+    <section className="relative rounded-[0.625rem] bg-[#F2F2F2]">
+      <img src={vegepic} className="pt-[120px] "  alt="Discount Banner" />
       <div className="h-[5.25rem] w-[19.5rem] absolute top-[1.25rem] left-[4rem]">
         <h1 className="font-semibold text-3xl text-orange-500">
           79% <span className="text-[#1A1A1A]">Discount</span>
