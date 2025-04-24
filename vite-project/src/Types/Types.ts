@@ -114,6 +114,7 @@ import { Vegetable_Image } from "../Utility/Staticimage";
 export interface Vege {
     id: number;
     img: string;
+    images: string[];
     title: string;
     price: number  ;
     quantity: number;
@@ -131,6 +132,12 @@ export const hotproduct: HotProduct = {
             img: Vegetable_Image.pear,
             title: 'Green Apple',
             price: 14.99,
+            images: [
+                Vegetable_Image.pear,
+                Vegetable_Image.pear,
+                Vegetable_Image.pear,
+                Vegetable_Image.pear,
+            ],
             quantity: 1,
         },
         {
@@ -138,6 +145,12 @@ export const hotproduct: HotProduct = {
             img: Vegetable_Image.orange,
             title: "Fresh Indian Malta",
             price: 14.99,
+            images: [
+                Vegetable_Image.orange,
+                Vegetable_Image.orange,
+                Vegetable_Image.orange,
+                Vegetable_Image.orange,
+            ],
             quantity: 1,
 
         },
@@ -146,6 +159,12 @@ export const hotproduct: HotProduct = {
             img: Vegetable_Image.chines,
             title: 'Chines Cabbage',
             price: 12.00,
+            images:[
+                Vegetable_Image.chines,
+                Vegetable_Image.right,
+                Vegetable_Image.left,
+                Vegetable_Image.down,
+            ],
             quantity: 1,
 
 
@@ -156,6 +175,12 @@ export const hotproduct: HotProduct = {
             title: 'Green Lettuce',
             price: 9.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.curlys,
+                Vegetable_Image.curlys,
+                Vegetable_Image.curlys,
+                Vegetable_Image.curlys,
+            ]
 
         },
         {
@@ -164,6 +189,12 @@ export const hotproduct: HotProduct = {
             title: 'Eggplant',
             price: 34.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.brinjal,
+                Vegetable_Image.brinjal,
+                Vegetable_Image.brinjal,
+                Vegetable_Image.brinjal,
+            ]
 
         },
         {
@@ -172,6 +203,12 @@ export const hotproduct: HotProduct = {
             title: 'Big Potatoes',
             price: 20.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.potato,
+                Vegetable_Image.potato,
+                Vegetable_Image.potato,
+                Vegetable_Image.potato,
+            ]
 
         },
         {
@@ -180,6 +217,12 @@ export const hotproduct: HotProduct = {
             title: 'corn',
             price: 20.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.maze,
+                Vegetable_Image.maze,
+                Vegetable_Image.maze,
+                Vegetable_Image.maze,
+            ]
 
         },
         {
@@ -188,6 +231,12 @@ export const hotproduct: HotProduct = {
             title: 'Fresh CauliFlower',
             price: 12.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.cauli,
+                Vegetable_Image.cauli,
+                Vegetable_Image.cauli,
+                Vegetable_Image.cauli,
+            ]
 
         },
         {
@@ -196,6 +245,12 @@ export const hotproduct: HotProduct = {
             title: 'Green Capcicun',
             price: 9.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.capcicon,
+                Vegetable_Image.capcicon,
+                Vegetable_Image.capcicon,
+                Vegetable_Image.capcicon,
+            ]
 
         },
         {
@@ -204,6 +259,12 @@ export const hotproduct: HotProduct = {
             title: 'Green Chili',
             price: 34.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.chilli,
+                Vegetable_Image.chilli,
+                Vegetable_Image.chilli,
+                Vegetable_Image.chilli,
+            ]
         },
         {
             id: 28,
@@ -211,6 +272,12 @@ export const hotproduct: HotProduct = {
             title: 'Red Chili',
             price: 12.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.redcap,
+                Vegetable_Image.redcap,
+                Vegetable_Image.redcap,
+                Vegetable_Image.redcap,
+            ]
         },
         {
             id: 29,
@@ -218,6 +285,12 @@ export const hotproduct: HotProduct = {
             title: 'Red Tomatos',
             price: 9.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.tomato,
+                Vegetable_Image.tomato,
+                Vegetable_Image.tomato,
+                Vegetable_Image.tomato,
+            ]
         },
         {
             id: 30,
@@ -225,6 +298,12 @@ export const hotproduct: HotProduct = {
             title: "Surjapur Mango",
             price: 34.00,
             quantity: 1,
+            images:[
+                Vegetable_Image.slicmango,
+                Vegetable_Image.slicmango,
+                Vegetable_Image.slicmango,
+                Vegetable_Image.slicmango,
+            ]
         },
         {
             id: 31,
@@ -232,6 +311,12 @@ export const hotproduct: HotProduct = {
             title: "Red Chilli",
             price: 14.99,
             quantity: 1,
+            images:[
+                Vegetable_Image.redchilly,
+                Vegetable_Image.redchilly,
+                Vegetable_Image.redchilly,
+                Vegetable_Image.redchilly,
+            ]
         },
         {
             id: 32,
@@ -239,6 +324,12 @@ export const hotproduct: HotProduct = {
             title:" Green Cucumber",
             price: 14.99,
             quantity: 1,
+            images:[
+                Vegetable_Image.cucumber,
+                Vegetable_Image.cucumber,
+                Vegetable_Image.cucumber,
+                Vegetable_Image.cucumber,
+            ]
         },
         {
             id: 33,
@@ -246,6 +337,12 @@ export const hotproduct: HotProduct = {
             title:"Ladies Finger",
             price: 14.99,
             quantity: 1,
+            images:[
+                Vegetable_Image.ladyfinger,
+                Vegetable_Image.ladyfinger,
+                Vegetable_Image.ladyfinger,
+                Vegetable_Image.ladyfinger,
+            ]
         }
     ]
 };

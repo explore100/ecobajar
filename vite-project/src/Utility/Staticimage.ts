@@ -65,6 +65,9 @@ import slicmango from "../assets/Image/mango.png";
 import redchilly from "../assets/Image/redchilly.png";
 import cucumber from "../assets/Image/cucumber.png";
 import ladyfinger from "../assets/Image/ladyfinger.png";
+import right from "../assets/Image/rightimg.png";
+import left from "../assets/Image/left Image.png";  
+import down from "../assets/Image/downImage.png";
 type VegetableImage = {
   [key: string]: string;
 };
@@ -86,6 +89,10 @@ export const Vegetable_Image: VegetableImage = {
   redchilly,
   cucumber,
   ladyfinger,
+  right,
+  left,
+  down
+
 
 };
 

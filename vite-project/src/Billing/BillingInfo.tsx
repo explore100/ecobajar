@@ -185,7 +185,7 @@ const BillingInfo = () => {
           <div className="py-[10px] flex gap-[6px] items-center">
             <input type="checkbox" className="w-[20px] h-[20px]"/>
             <p className="font-normal text-sm text-[#4D4D4D]">Ship to a different address</p>
-          </div>
+          </div> 
         </form>
       </div>
       <AddInfo/>

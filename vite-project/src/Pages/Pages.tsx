@@ -1,10 +1,12 @@
-import ImageDeat from "../ProductDetail/ImageDeat"
 
+import RoutingLayout from "../ProductDetail/RoutingLayout";
 
 const Pages = () => {
   return (
-    <div><ImageDeat/></div>
-  )
-}
+    <div>
+      <RoutingLayout/>
+    </div>
+  );
+};
 
-export default Pages
+export default Pages;
