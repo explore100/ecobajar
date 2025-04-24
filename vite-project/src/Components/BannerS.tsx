@@ -1,12 +1,24 @@
 import ShopButton from "../Ui/ShopButton";
 import { bannerproduct } from "../Types/Types"
 import { FaArrowRight } from "react-icons/fa6";
+import { useState, useEffect } from "react";
 
 
 
 
 const BannerS = () => {
+let clock = new Date().toLocaleTimeString();
+    const [currentTime, setNewTime] =  useState(clock);
+    const [hour, minute, second] = currentTime.split(":");
 
+    const updateTime = () => {
+        clock = new Date().toLocaleTimeString();
+        setNewTime(clock);
+    };
+    useEffect(() => {
+        const interval = setInterval(updateTime, 1000);
+        return () => clearInterval(interval);
+    }, [])
   return (
     <>
       <section className="w-[82.5rem] h-[33.5rem] mx-[18.75rem] my-[3.75rem] flex gap-[1.5rem]">
@@ -25,16 +37,16 @@ const BannerS = () => {
                       <h1 className="text-xs text-[#FFFFFFCC] uppercase">days</h1>
                     </div>
                     <div className="w-[3.5rem] h-[3.25rem] text-center">
-                      <p className="font-normal text-2xl">00</p>
-                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">hours</h1>
+                      <p className="font-normal text-2xl">{hour}</p>
+                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">hour</h1>
                     </div>
                     <div className="w-[3.5rem] h-[3.25rem] text-center">
-                      <p className="font-normal text-2xl">00</p>
-                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">mins</h1>
+                      <p className="font-normal text-2xl">{minute}</p>
+                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">Min</h1>
                     </div>
                     <div className="w-[3.5rem] h-[3.25rem] text-center">
-                      <p className="font-normal text-2xl">00</p>
-                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">secs</h1>
+                      <p className="font-normal text-2xl">{second.split(" ")[0]}</p>
+                      <h1 className="text-xs text-[#FFFFFFCC]  uppercase">Sec</h1>
                     </div>
                   </div>
                 )}

@@ -27,6 +27,10 @@ export interface ShoppingCart {
     title: string
 }
 
+export interface RealatedProduct {
+    title: string
+}
+
 
 
 
@@ -81,29 +85,40 @@ interface Date {
 export const date: Date = {
     FeatureData: [
         {
-            id: 30,
+            id: 34,
             img: Feature_Image.truck,
             title: 'Fast Delivery',
             description: 'Free shipping on all your order'
         },
         {
-            id: 31,
+            id: 35,
             img: Feature_Image.headphone,
             title: 'Customer Support 24/7',
             description: 'Instant access to Support'
         },
         {
-            id: 32,
+            id: 36,
             img: Feature_Image.shoppingbag,
             title: '100% Secure Payment',
             description: 'We ensure your money is save'
         },
         {
-            id: 33,
+            id: 37,
             img: Feature_Image.box,
             title: 'Money-Back Guarantee',
             description: '30 Days Money-Back Guarantee'
         },
+        {
+            id: 38,
+            img: Feature_Image.pricetag,
+            title: '64% Discount',
+            description: 'Save Your 64% money with us',
+        },
+        {
+            id: 39,
+            img: Feature_Image.grelef,
+            title: '100% Organic',
+            description: '100% Organic Vegetables',}
     ]
 };
 

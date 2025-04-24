@@ -83,7 +83,7 @@ const ProductDetail: React.FC = () => {
           </button>
         </div>
 
-        <button className="flex items-center h-[51px] w-[447px] bg-green-600 text-white px-[160px] py-[16px] rounded-full hover:bg-green-700 transition">
+        <button className="flex items-center h-[51px] w-[447px] bg-[#00B207] text-white px-[160px] py-[16px] rounded-full hover:bg-green-700 transition">
           <BsHandbag className="mr-2" /> Add to Cart
         </button>
 

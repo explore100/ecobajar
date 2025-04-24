@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
-import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals, ShoppingCart,  } from "../Types/Types";
+import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals, ShoppingCart, RealatedProduct,  } from "../Types/Types";
 
-export const  HotDealsdata: HotDeals ={
-  title: "Hot Deals"
+export const Related : RealatedProduct = {
+    title: 'Related Products'
 }
+
 
 export const preHeaderdata: IpreHeader ={
     title: 'Store Location: Lincoln-344, Illinois, Chicago, USA'

@@ -3,12 +3,24 @@ import { bannerproduct } from "../Types/Types"
 import ShopButton from "../Ui/ShopButton";
 import { FaArrowRight } from "react-icons/fa6";
 import Filter from "./Filter";
-
+import { useState, useEffect } from "react";
 
 
 
 
 const ShopBanner = () => {
+    let clock = new Date().toLocaleTimeString();
+    const [currentTime, setNewTime] =  useState(clock);
+    const [hour, minute, second] = currentTime.split(":");
+
+    const updateTime = () => {
+        clock = new Date().toLocaleTimeString();
+        setNewTime(clock);
+    };
+    useEffect(() => {
+        const interval = setInterval(updateTime, 1000);
+        return () => clearInterval(interval);
+    }, [])
     return (
         <>
             <section className="w-[82.5rem] h-[22.375rem] mt-[1.5rem]">
@@ -22,13 +34,24 @@ const ShopBanner = () => {
                                 <h1 className={`text-4xl font-semibold text-[#FFFFFF] `}>{item.title}</h1>
 
                                 <div className="flex gap-4 mt-4 mb-6">
-                                    {["days", "hours", "mins", "secs"].map((label) => (
-                                        <div key={label} className="w-14 h-13 text-center">
-                                            <p className="font-normal text-2xl text-[#00B207]">00</p>
-                                            <h1 className="text-xs text-white/80 uppercase">{label}</h1>
-                                        </div>
-                                    ))}
-                                </div>
+    <div className="w-14 h-13 text-center">
+        <p className="font-normal text-2xl text-[#00B207]">00</p>
+        <h1 className="text-xs text-white/80 uppercase">days</h1>
+    </div>
+    <div className="w-14 h-13 text-center">
+        <p className="font-normal text-2xl text-[#00B207]">{hour}</p>
+        <h1 className="text-xs text-white/80 uppercase">hours</h1>
+    </div>
+    <div className="w-14 h-13 text-center">
+        <p className="font-normal text-2xl text-[#00B207]">{minute}</p>
+        <h1 className="text-xs text-white/80 uppercase">mins</h1>
+    </div>
+    <div className="w-14 h-13 text-center">
+        <p className="font-normal text-2xl text-[#00B207]">{second.split(" ")[0]}</p>
+        <h1 className="text-xs text-white/80 uppercase">secs</h1>
+    </div>
+</div>
+
                                 <ShopButton
                                     title="Shop Now"
                                     icon={<FaArrowRight />}

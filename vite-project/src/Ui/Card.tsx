@@ -3,29 +3,42 @@ import { FaStar } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import ShopButton from "./ShopButton";
+import { useCartStore } from "../Context/Main";
+
 
 interface Props {
-    image: string;
-    price: string | number;
+    img: string;
+    price:  number;
     title: string;
-    index: number;
+    id: number;   
 }
-const Card = ({ image, price, index, title }: Props) => {
+const Card = ({ img, price, title, id }: Props) => {
+    const addtoCart = useCartStore((state) => state.addToCart);
+    const item = {
+        id: id, // Optional: Use index or some real unique ID
+        img: img,
+        title,
+        price,
+        images: [],
+        quantity: 0
+    };
     return (
-        <div key={index} className="border-2 w-[16.5rem] h-[20.4375rem] group relative transition-all duration-300 hover:border-green-600  ">
+        <div key={item.id} className="border-2 rounded-lg w-[16.5rem] h-[20.4375rem] group relative transition-all duration-300 hover:border-green-600  ">
             <div>
-                <img src={image} alt="" className="w-[15.875rem] h-[14.375rem] mx-[0.3125rem] my-[0.3125rem] " />
+                <img src={item.img} alt="" className="w-[15.875rem] h-[14.375rem] mx-[0.3125rem] my-[0.3125rem] " />
                 <div className="absolute inset-0 top-[1rem] left-[13rem] flex flex-col gap-[6px] h-[40px] w-[40px] opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="border rounded-full p-[10px] shadow-md" ><CiHeart /></button>
-                    <button className="border rounded-full p-[10px]"  ><IoEyeOutline /></button>
+                    <button className="border rounded-full p-[10px] shadow-md bg-[#F2F2F2]" ><CiHeart /></button>
+                    <button className="border rounded-full p-[10px] shadow-md bg-[#F2F2F2]"  ><IoEyeOutline /></button>
                 </div>
             </div>
 
-            <div className="w-[16.5rem] h-[5.4375rem] px-[0.75rem]  ">
-                <h1 className="font-normal text-sm text-[#4D4D4D] group-hover:text-green-500 transition ">{title}</h1>
-                <div className="flex  gap-[8.8125rem]">
-                    <p className="font-medium text-base">{price}</p>
-                    <button className=" rounded-full bg-[#F2F2F2] px-[0.625rem] py-[0.6563rem] h-[40px] w-[40px] group-hover:bg-green-500 transition "><BsHandbag className="group-hover:text-white transition" /></button>
+            <div className="w-[16.5rem] h-[5.4375rem] px-[0.75rem] ">
+                <h1 className="font-normal text-sm text-[#4D4D4D] group-hover:text-green-500 transition ">{item.title}</h1>
+                <div className="flex justify-between  gap-[10rem]">
+                    <p className="font-medium text-base">{item.price}</p>
+                    <button onClick={() => addtoCart(item)} className="rounded-full bg-[#F2F2F2] px-[0.625rem] py-[0.6563rem] h-[40px] w-[40px] group-hover:bg-green-500 transition">
+                        <BsHandbag className="group-hover:text-white transition" />
+                    </button>
                 </div>
 
                 {[...Array(5)].map((_, index) => (

@@ -37,6 +37,8 @@ import truck from "../assets/Image/delivery-truck 1.png";
 import headphone from "../assets/Image/headphones 1.png";
 import shoppingbag from "../assets/Image/shopping-bag.png";
 import box from "../assets/Image/package.png";
+import pricetag from "../assets/Image/pricetag.png";
+import grelef from "../assets/Image/grelef.png";
 
 type FeatureImage = {
   [key: string]: string;
@@ -47,6 +49,8 @@ export const Feature_Image: FeatureImage = {
   headphone,
   shoppingbag,
   box,
+  pricetag,
+  grelef,
 };
 
 import pear from "../assets/Image/pear.png";

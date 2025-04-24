@@ -3,7 +3,7 @@ import RoutingLayout from "../ProductDetail/RoutingLayout";
 
 const Pages = () => {
   return (
-    <div>
+    <div className="">
       <RoutingLayout/>
     </div>
   );
