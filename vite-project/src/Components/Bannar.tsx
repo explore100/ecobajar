@@ -38,7 +38,7 @@ const Bannar = () => {
         </div>
       </div>
       <div className="grid grid-rows-2  gap-[1.5rem] mr-[1.5rem]">
-        <div >
+        <div>
           <img src={banner2} className="h-[18rem] w-[26.4375rem] absolute" />
           <div className="h-[8.5rem] w-[9.75rem]  relative top-[2rem] left-[2rem]">
             <h2 className="font-medium text-sm uppercase">summer sale</h2>
@@ -62,14 +62,20 @@ const Bannar = () => {
           />
           <div className="relative h-[9.5625rem] w-[21.4375rem]  left-[2.5rem] px-[2.5rem] py-[4.1875rem]">
             <div className="text-[#FFFFFF] ">
-              <h3 className="uppercase font-medium text-sm pl-[80px]">Best deal</h3>
+              <h3 className="uppercase font-medium text-sm pl-[80px]">
+                Best deal
+              </h3>
               <h1 className="font-semibold text-3xl ">
                 Special Products <br /> Deal of the Month{" "}
               </h1>
             </div>
-            <button className="flex  items-center font-semibold text-base  pt-[2rem] gap-[0.75rem] text-[#00B207]">
-              Shop Now <FaArrowRight />
-            </button>
+
+            <ShopButton
+              title="Shop Now"
+              icon={<FaArrowRight />}
+              bgcolor="" // Tailwind bg color
+              textcolor="text-[#00B207]"
+            />
           </div>
         </div>
       </div>

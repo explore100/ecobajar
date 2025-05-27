@@ -3,6 +3,8 @@ import { Vege } from "../Types/Types";
 import Payment from "./Payment";
 
 
+
+
 const OrderSum = () => {
     const location = useLocation();
     const {
@@ -13,6 +15,9 @@ const OrderSum = () => {
     } = location.state || {};
 
     return (
+        <div className="flex">
+
+       
         <section className="w-[424px] h-auto mt-[32px] border-2 rounded-lg">
             <div className="w-[376px] h-auto p-[24px]  bg-white">
                 <h1 className="font-medium text-xl mb-4">Order Summary</h1>
@@ -68,6 +73,7 @@ const OrderSum = () => {
             </div>
             <Payment/>
         </section>
+         </div>
     );
 };
 

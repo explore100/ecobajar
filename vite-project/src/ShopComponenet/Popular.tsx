@@ -27,7 +27,7 @@ const PopularTags = () => {
   return (
     <div className="h-[18.3125rem] w-[19.5rem]">
       <div className="py-[1.25rem] border-t-2 flex justify-between items-center">
-                                  <span className="font-medium text-xl ">Rating</span>
+                                  <span className="font-medium text-xl ">Popular Tag</span>
                                   <span><FaChevronUp /></span>
                               </div>
       <div className="flex flex-wrap gap-2">
