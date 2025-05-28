@@ -5,14 +5,19 @@ import { Vege } from "../Types/Types";
 
 interface CartState {
   cartItems: Vege[];
+  coupon: string | null;
+  discount: number;
   addToCart: (item: Vege) => void;
   updateQuantity: (id: number, delta: number) => void;
   removeItem: (id: number) => void;
   totalPrice: () => number;
-}
+  applyCoupon: (code: string) => void;
+};
 
 export const useCartStore = create<CartState>((set, get) => ({
   cartItems: [],
+  coupon: null,
+  discount: 0,
 
   addToCart: (item) => {
     const existingItem = get().cartItems.find((i) => i.id === item.id);
@@ -48,5 +53,18 @@ export const useCartStore = create<CartState>((set, get) => ({
       (sum, item) => sum + item.price * item.quantity,
       0
     );
+  },
+  applyCoupon: (code) => {
+    const validCoupons: Record<string, number> = {
+      SAVE10: 10,
+      SAVE20: 20,
+      FREESHIP: 0,
+    };
+
+    if (validCoupons[code]) {
+      set({ coupon: code, discount: validCoupons[code] });
+    } else {
+      set({ coupon: null, discount: 0 });
+    }
   },
 }));

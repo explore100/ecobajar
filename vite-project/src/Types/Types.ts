@@ -19,9 +19,7 @@ export interface LatestNews {
 }
 
 // this is the code of hot deals
-export interface HotDeals {
-    title: string
-}
+
 
 export interface ShoppingCart {
     title: string

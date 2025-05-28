@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IpreHeader, Product, FeatProduct, LatestNews, HotDeals, ShoppingCart, RealatedProduct,  } from "../Types/Types";
+import { IpreHeader, Product, FeatProduct, LatestNews,  ShoppingCart, RealatedProduct,  } from "../Types/Types";
 
 export const Related : RealatedProduct = {
     title: 'Related Products'

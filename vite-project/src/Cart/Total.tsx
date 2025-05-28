@@ -8,7 +8,11 @@ type TotalProps = {
 };
 
 const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
-  const total = subtotal + shipping;
+
+  const discount = useCartStore((state) => state.discount); // get discount from Zustand
+  const coupon = useCartStore((state) => state.coupon);
+  const discountAmount = subtotal * (discount / 100);
+  const total = subtotal -discountAmount + shipping;
   const cartItems = useCartStore((state) => state.cartItems); // get items from Zustand
 
   return (
@@ -20,12 +24,21 @@ const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
           <span className="text-base font-normal">Subtotal:</span>
           <span className="text-base font-semibold">${subtotal.toFixed(2)}</span>
         </div>
+
         <div className="flex justify-between items-center">
           <span className="text-base font-normal">Shipping:</span>
           <span className="text-base font-semibold">
             {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
           </span>
         </div>
+         {coupon && (
+          <div className="flex justify-between items-center text-green-600">
+            <span className="text-base font-normal">Coupon ({coupon}):</span>
+            <span className="text-base font-semibold">
+              −${discountAmount.toFixed(2)}
+            </span>
+          </div>
+        )}
         <div className="flex justify-between items-center">
           <span className="text-base font-normal">Total:</span>
           <span className="text-base font-semibold">${total.toFixed(2)}</span>
@@ -36,6 +49,8 @@ const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
         to="/CheckOut"
         state={{
           subtotal: subtotal.toFixed(2),
+            discount: discount.toFixed(2),
+          discountAmount: discountAmount.toFixed(2),
           shipping: shipping.toFixed(2),
           total: total.toFixed(2),
           cartItems, // 👈 pass items too!

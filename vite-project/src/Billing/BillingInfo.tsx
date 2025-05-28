@@ -23,6 +23,7 @@ const BillingInfo = () => {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+    alert("Billing information submitted successfully!");
   };
 
   return (
