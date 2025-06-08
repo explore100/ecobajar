@@ -1,4 +1,4 @@
-// src/Context/Main.ts
+//zustand store for managing cart state in a React application
 
 import { create } from "zustand";
 import { Vege } from "../Types/Types";
@@ -24,7 +24,7 @@ export const useCartStore = create<CartState>((set, get) => ({
     if (existingItem) {
       set((state) => ({
         cartItems: state.cartItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i   
         ),
       }));
     } else {

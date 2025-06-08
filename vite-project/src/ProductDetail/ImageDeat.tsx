@@ -4,6 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ProductDetail from "./Description";
 
 
+
 const ImageDeat = () => {
   const product = hotproduct.ProductData[2]; // Example: Chinese Cabbage (id: 20)
   const [selectedImage, setSelectedImage] = useState(product.images[0]);

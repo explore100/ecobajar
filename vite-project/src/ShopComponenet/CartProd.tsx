@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { useCartStore } from "../Context/Main"; // ✅ import the store
+import { NavLink } from "react-router";
 
 function CartProd() {
   const addToCart = useCartStore((state) => state.addToCart); // ✅ get addToCart function
@@ -22,7 +23,10 @@ function CartProd() {
             <img src={item.img} className="h-[18.875rem] w-[18.875rem] p-[1.25rem]" alt="" />
             <div className="absolute top-[1.25rem] left-[15.75rem] flex flex-col gap-[6px] opacity-0 group-hover:opacity-100 transition">
               <button className="border rounded-full p-[10px] shadow-md bg-[#F2F2F2]"><CiHeart /></button>
-              <button className="border rounded-full p-[10px] bg-[#F2F2F2]"><IoEyeOutline /></button>
+              <button className="border rounded-full p-[10px] bg-[#F2F2F2]">
+                <NavLink to='/RoutingLayout'><IoEyeOutline /> </NavLink>
+                
+                </button>
             </div>
             <div className="px-[0.75rem]">
               <h1 className="text-sm text-[#4D4D4D] group-hover:text-green-500 transition">{item.title}</h1>

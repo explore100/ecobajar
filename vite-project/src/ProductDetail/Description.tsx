@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import farmary from "../assets/Image/farmary.png";
 
+
 const ProductDetail: React.FC = () => {
   const [quantity, setQuantity] = useState(5);
 
@@ -17,7 +18,7 @@ const ProductDetail: React.FC = () => {
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <div className="w-[648px] h-[501px] gap-[24px]">
+    <><div className="w-[648px] h-[501px] gap-[24px]">
       <div className="border-b-2  ">
         <div className="flex items-center gap-[8px]">
           <h2 className="text-4xl font-semibold text-black">Chinese Cabbage</h2>
@@ -101,7 +102,7 @@ const ProductDetail: React.FC = () => {
           Cabbage
         </p>
       </div>
-    </div>
+    </div></>  
   );
 };
 

@@ -1,7 +1,6 @@
 import ShopButton from "../Ui/ShopButton"
 import { FaInstagram } from "react-icons/fa6";
 import { CiFacebook } from "react-icons/ci";
-
 import { FaTwitter } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 

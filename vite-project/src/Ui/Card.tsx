@@ -4,6 +4,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import ShopButton from "./ShopButton";
 import { useCartStore } from "../Context/Main";
+import { NavLink } from "react-router";
 
 
 interface Props {
@@ -28,7 +29,9 @@ const Card = ({ img, price, title, id }: Props) => {
                 <img src={item.img} alt="" className="w-[15.875rem] h-[14.375rem] mx-[0.3125rem] my-[0.3125rem] " />
                 <div className="absolute inset-0 top-[1rem] left-[13rem] flex flex-col gap-[6px] h-[40px] w-[40px] opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="border rounded-full p-[10px] shadow-md bg-[#F2F2F2]" ><CiHeart /></button>
-                    <button className="border rounded-full p-[10px] shadow-md bg-[#F2F2F2]"  ><IoEyeOutline /></button>
+                    <button className="border rounded-full p-[10px] shadow-md bg-[#F2F2F2]" >
+                        <NavLink to='/RoutingLayout'><IoEyeOutline />
+                            </NavLink></button>
                 </div>
             </div>
 
