@@ -1,9 +1,7 @@
-// src/Pages/Cartx.tsx
-
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom"; // ✅ fixed typo
 import { useCartStore } from "../Context/Main";
 import { Vege } from "../Types/Types";
-import Total from "./Total"; // your total summary component
+import Total from "./Total";
 
 const Cartx: React.FC = () => {
   const cartItems = useCartStore((state) => state.cartItems);
@@ -20,19 +18,22 @@ const Cartx: React.FC = () => {
   const shipping: number = subtotal > 100 ? 0 : 10;
 
   return (
-    <section className="flex gap-[24px]">
-      <div className="border-2 w-[872px] ml-[300px] mr-[24px] rounded-lg">
-        <div className="flex justify-evenly items-center h-[30px] font-semibold text-gray-500 border-b pb-[16px] mt-[16px]">
+    <section className="flex flex-col lg:flex-row gap-6 lg:gap-[24px]">
+      {/* Cart Items */}
+      <div className="border-2 w-full lg:w-[872px] lg:ml-[300px] lg:mr-[24px] rounded-lg">
+        {/* Header */}
+        <div className="hidden md:flex justify-evenly items-center h-[30px] font-semibold text-gray-500 border-b pb-4 mt-4">
           <div>PRODUCT</div>
           <div>PRICE</div>
           <div>QUANTITY</div>
           <div>SUBTOTAL</div>
         </div>
 
+        {/* Items */}
         {cartItems.map((item) => (
           <div
             key={item.id}
-            className="grid grid-cols-4 items-center w-[832px] h-[100px] mx-[20px] my-[12px] border-b"
+            className="grid grid-cols-1 md:grid-cols-4 items-center px-4 py-4 border-b"
           >
             <div className="flex items-center gap-4">
               <img
@@ -43,9 +44,9 @@ const Cartx: React.FC = () => {
               <span>{item.title}</span>
             </div>
 
-            <div className="ml-[80px]">${item.price}</div>
+            <div className="md:ml-[80px] mt-2 md:mt-0">${item.price}</div>
 
-            <div className="flex items-center gap-2 ml-[35px]">
+            <div className="flex items-center gap-2 mt-2 md:mt-0 md:ml-[35px]">
               <button
                 onClick={() => updateQuantity(item.id, -1)}
                 className="px-2 py-1 border rounded-full"
@@ -61,7 +62,7 @@ const Cartx: React.FC = () => {
               </button>
             </div>
 
-            <div className="flex justify-between items-center ml-[35px]">
+            <div className="flex justify-between md:justify-start items-center mt-2 md:mt-0 md:ml-[35px]">
               <span>${getSubtotal(item)}</span>
               <button
                 onClick={() => removeItem(item.id)}
@@ -73,13 +74,14 @@ const Cartx: React.FC = () => {
           </div>
         ))}
 
-        <div className="flex justify-between px-[20px] py-[16px]">
-          <NavLink to="/shop" className="bg-gray-100 rounded-full hover:text-blue-500">
-          <button className="px-4 py-2 bg-gray-100 rounded-full text-sm">
-            Return to shop
-          </button>
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-between items-center px-4 py-4 gap-4">
+          <NavLink to="/shop">
+            <button className="px-4 py-2 bg-gray-100 rounded-full hover:text-blue-500 text-sm">
+              Return to shop
+            </button>
           </NavLink>
-         
+
           <button className="px-4 py-2 bg-gray-100 rounded-full hover:text-blue-500 text-sm">
             Update Cart
           </button>
@@ -87,7 +89,9 @@ const Cartx: React.FC = () => {
       </div>
 
       {/* Total Summary */}
-      <Total subtotal={subtotal} shipping={shipping} />
+      <div className="w-full lg:w-auto lg:mr-8">
+        <Total subtotal={subtotal} shipping={shipping} />
+      </div>
     </section>
   );
 };

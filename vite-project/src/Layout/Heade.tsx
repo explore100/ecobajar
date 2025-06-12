@@ -1,38 +1,42 @@
-// src/Layout/Heade.tsx
-
 import Leaf from "../assets/Image/plant 1.jpg";
 import { IoIosSearch } from "react-icons/io";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BsHandbag } from "react-icons/bs";
 import { useCartStore } from "../Context/Main";
 import { NavLink } from "react-router";
+
 const Heade = () => {
   const cartItems = useCartStore((state) => state.cartItems);
   const totalPrice = useCartStore((state) => state.totalPrice)();
 
   return (
-    <section className="border-t-4 border-[#E5E5E5] w-full h-[93px] flex justify-evenly items-center px-8">
+    <section className="border-t-4 border-[#E5E5E5] w-full h-auto lg:h-[93px] flex flex-col lg:flex-row justify-center lg:justify-evenly items-center gap-4 lg:gap-0 px-4 lg:px-8 py-4">
+      
+      {/* Logo */}
       <div className="flex items-center gap-2">
         <img src={Leaf} alt="Plant Logo" className="h-8 w-8" />
         <h1 className="text-3xl font-medium">Ecobazar</h1>
       </div>
 
-      <div className="relative flex items-center w-[500px]">
+      {/* Search Bar */}
+      <div className="relative flex items-center w-full max-w-[500px]">
         <IoIosSearch className="absolute left-4 top-3 h-5 w-5 text-gray-500" />
         <input
           type="text"
           placeholder="Search..."
-          className="border-2 border-gray-300 px-12 text-lg rounded-l-lg py-3 w-[400px] h-[45px]"
+          className="border-2 border-gray-300 px-12 text-lg rounded-l-lg py-3 w-full h-[45px]"
         />
-        <button className="bg-[#00B207] text-white py-3 px-6 text-sm font-semibold rounded-r-lg h-[45px] w-[98px]">
+        <button className="bg-[#00B207] text-white py-3 px-6 text-sm font-semibold rounded-r-lg h-[45px]">
           Search
         </button>
       </div>
 
+      {/* Cart + Heart + Total */}
       <div className="flex items-center gap-4">
-        <div className="border-r-4 pr-4">
+        <div className="border-r-2 pr-4">
           <IoMdHeartEmpty className="h-[32px] w-[32px]" />
         </div>
+
         <NavLink to="/cart" className="relative block">
           <BsHandbag className="text-3xl cursor-pointer" />
           {cartItems.length > 0 && (

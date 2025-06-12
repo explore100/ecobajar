@@ -1,5 +1,5 @@
-import { useCartStore } from "../Context/Main"; // Add this
-import { NavLink } from "react-router"; // fix typo: "react-router" ➡ "react-router-dom"
+import { useCartStore } from "../Context/Main";
+import { NavLink } from "react-router-dom"; // ✅ fixed import
 import ShopButton from "../Ui/ShopButton";
 
 type TotalProps = {
@@ -8,15 +8,15 @@ type TotalProps = {
 };
 
 const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
-
-  const discount = useCartStore((state) => state.discount); // get discount from Zustand
+  const discount = useCartStore((state) => state.discount);
   const coupon = useCartStore((state) => state.coupon);
+  const cartItems = useCartStore((state) => state.cartItems);
+
   const discountAmount = subtotal * (discount / 100);
-  const total = subtotal -discountAmount + shipping;
-  const cartItems = useCartStore((state) => state.cartItems); // get items from Zustand
+  const total = subtotal - discountAmount + shipping;
 
   return (
-    <div className="w-[424px] h-[296px] border-2 rounded-lg p-6 relative bg-white shadow-md">
+    <div className="w-full max-w-md lg:w-[424px] lg:h-[296px] border-2 rounded-lg p-6 bg-white shadow-md mx-auto lg:mx-0">
       <h1 className="text-xl font-medium mb-6">Cart Total</h1>
 
       <div className="space-y-4">
@@ -31,7 +31,8 @@ const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
             {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
           </span>
         </div>
-         {coupon && (
+
+        {coupon && (
           <div className="flex justify-between items-center text-green-600">
             <span className="text-base font-normal">Coupon ({coupon}):</span>
             <span className="text-base font-semibold">
@@ -39,6 +40,7 @@ const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
             </span>
           </div>
         )}
+
         <div className="flex justify-between items-center">
           <span className="text-base font-normal">Total:</span>
           <span className="text-base font-semibold">${total.toFixed(2)}</span>
@@ -49,11 +51,11 @@ const Total: React.FC<TotalProps> = ({ subtotal, shipping }) => {
         to="/CheckOut"
         state={{
           subtotal: subtotal.toFixed(2),
-            discount: discount.toFixed(2),
+          discount: discount.toFixed(2),
           discountAmount: discountAmount.toFixed(2),
           shipping: shipping.toFixed(2),
           total: total.toFixed(2),
-          cartItems, // 👈 pass items too!
+          cartItems,
         }}
       >
         <div className="mt-8">
